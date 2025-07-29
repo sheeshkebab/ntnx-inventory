@@ -1,3 +1,4 @@
+---
 plugin: nutanix.ncp.ntnx_prism_vm_inventory
 nutanix_hostname: "{{ lookup('env', 'NUTANIX_HOSTNAME') }}"
 nutanix_username: "{{ lookup('env', 'NUTANIX_USERNAME') }}"
