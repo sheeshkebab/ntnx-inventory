@@ -1,7 +1,7 @@
 plugin: nutanix.ncp.ntnx_prism_vm_inventory
-nutanix_hostname: "{{ NUTANIX_HOSTNAME }}" 
-nutanix_username: "{{ NUTANIX_USERNAME }}" 
-nutanix_password: "{{ NUTANIX_PASSWORD }}" 
+nutanix_hostname: "{{ lookup('ansible.builtin.env', 'NUTANIX_HOSTNAME', default=undef()) }}" 
+nutanix_username: "{{ lookup('ansible.builtin.env', 'NUTANIX_USERNAME', default=undef()) }}" 
+nutanix_password: "{{ lookup('ansible.builtin.env', 'NUTANIX_PASSWORD', default=undef()) }}" 
 validate_certs: false
 data: { offset: 0, length: 1000 }
 #groups:
