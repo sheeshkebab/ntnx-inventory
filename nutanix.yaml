@@ -4,6 +4,13 @@ plugin: nutanix.ncp.ntnx_prism_vm_inventory
 fetch_all_vms: true
 validate_certs: false
 data: { offset: 0, length: 1000 }
+groups:
+  group_1: "'<name_prefix>' in name"
+  group_2: "'<vm_name>'==name"
+keyed_groups:
+  - prefix: host
+    separator: ":"
+    key: ansible_host
 #nutanix_hostname: 10.38.112.7
 #nutanix_username: admin
 #nutanix_password: !vault |
@@ -13,3 +20,5 @@ data: { offset: 0, length: 1000 }
 #          36303661323566663138326632356338656530373937633833356332333136656139363365393736
 #          6239613362653638310a396433333736663034663831316531656633653530383237333063303466
 #          3934
+
+# see https://docs.ansible.com/ansible/latest/vault_guide/vault_encrypting_content.html#encrypting-individual-variables-with-ansible-vault
