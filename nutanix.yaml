@@ -1,6 +1,10 @@
 ---
 plugin: nutanix.ncp.ntnx_prism_vm_inventory
+# Mark Shirtcliff
 
+fetch_all_vms: true
+validate_certs: false
+data: { offset: 0, length: 1000 }
 nutanix_hostname: 10.38.112.7
 nutanix_username: admin
 nutanix_password: !vault |
@@ -10,12 +14,3 @@ nutanix_password: !vault |
           64383230353334306332313739633161613265663465336633373639613137323931393933376433
           6166396265343634390a366261396264316461666638343462383062333431383033343461336139
           3632
- 
-fetch_all_vms: true
-validate_certs: false
-data: { offset: 0, length: 1000 }
-#
-#nutanix_hostname: "{{ lookup('env', 'NUTANIX_HOSTNAME') }}"
-#nutanix_username: "{{ lookup('env', 'NUTANIX_USERNAME') }}"
-#nutanix_password: "{{ lookup('env', 'NUTANIX_PASSWORD') }}"
-# Mark Shirtcliff
