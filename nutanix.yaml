@@ -1,5 +1,9 @@
 ---
 plugin: nutanix.ncp.ntnx_prism_vm_inventory
+
+nutanix_hostname: ""
+nutanix_username: ""
+nutanix_password: ""
 fetch_all_vms: true
 validate_certs: false
 data: { offset: 0, length: 1000 }
