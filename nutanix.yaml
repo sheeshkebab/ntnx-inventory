@@ -1,8 +1,8 @@
 ---
 plugin: nutanix.ncp.ntnx_prism_vm_inventory
 
-nutanix_hostname: ""
-nutanix_username: ""
+nutanix_hostname: '10.38.112.7' 
+nutanix_username: 'admin' 
 nutanix_password: ""
 fetch_all_vms: true
 validate_certs: false
@@ -11,3 +11,4 @@ data: { offset: 0, length: 1000 }
 #nutanix_hostname: "{{ lookup('env', 'NUTANIX_HOSTNAME') }}"
 #nutanix_username: "{{ lookup('env', 'NUTANIX_USERNAME') }}"
 #nutanix_password: "{{ lookup('env', 'NUTANIX_PASSWORD') }}"
+# Mark Shirtcliff
