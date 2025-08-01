@@ -11,6 +11,8 @@ keyed_groups:
   - prefix: host
     separator: ":"
     key: ansible_host
+
+# --> These are defined in custom inventory as Environment Variables
 #nutanix_hostname: 10.38.112.7
 #nutanix_username: admin
 #nutanix_password: !vault |
