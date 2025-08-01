@@ -1,9 +1,0 @@
----
-- name: Debug connection variables
-  hosts: all
-  tasks : 
-  - name : Debug
-    debug:
-      msg: "the username is {{ NUTANIX_USERNAME }}"
-      verbosity: 3
-    when: NUTANIX_USERNAME is defined
