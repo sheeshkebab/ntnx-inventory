@@ -6,7 +6,7 @@ validate_certs: false
 data: { offset: 0, length: 1000 }
 #filter: "'<vm_name>'=startswith
 groups:
-  RhelOrRocky: "'rhel-' in name" 
+  RhelOrRocky: "'rhel-' in '<vm_name>'" 
 #  group_1: "'<name_prefix>' in name"
 #  group_2: "'<vm_name>'==name"
 #keyed_groups:
