@@ -4,9 +4,9 @@ plugin: nutanix.ncp.ntnx_prism_vm_inventory
 fetch_all_vms: true
 validate_certs: false
 data: { offset: 0, length: 1000 }
-filters: "'rheljumphost01' in name"
+filters: "'rhel' in name"
 groups:
-  rhel_group: "'rheljumphost01' in name"
+  rhel_group: "'rhel' in name"
 #groups:
 #  RhelOrRocky: "'rhel' in '<vm_name>'" 
 #  group_1: "'<name_prefix>' in name"
