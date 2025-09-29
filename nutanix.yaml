@@ -5,16 +5,15 @@ fetch_all_vms: true
 validate_certs: false
 data: { offset: 0, length: 1000 }
 filters: "'rhel' in name"
-groups:
-  rhel_group: "'rhel' in name"
 #groups:
-#  RhelOrRocky: "'rhel' in '<vm_name>'" 
-#  group_1: "'<name_prefix>' in name"
-#  group_2: "'<vm_name>'==name"
-#keyed_groups:
-#  - prefix: host
-#    separator: ":"
-#    key: ansible_host
+#  rhel_group: "'rhel' in name"
+groups:
+  group_1: "'<name_prefix>' in name"
+  group_2: "'<vm_name>'==name"
+keyed_groups:
+  - prefix: host
+    separator: ":"
+    key: ansible_host
 
 # --> These are defined in custom inventory as Environment Variables
 #nutanix_hostname: 10.38.112.7
